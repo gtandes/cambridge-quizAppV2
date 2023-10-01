@@ -1,113 +1,121 @@
-import Image from 'next/image'
+"use client";
+
+import { Button } from "@nextui-org/react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+  const router = useRouter();
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+  return (
+    <main className="relative bg-white w-full h-[100dvh] overflow-hidden text-left text-[1rem] text-lightslategray-100">
+      <>
+        <div className="absolute top-[4.5rem] left-[46.75rem] font-semibold">
+          Back
+        </div>
+        <img
+          className="absolute top-[4.63rem] left-[44.94rem] w-[1.25rem] h-[1.25rem]"
+          alt=""
+          src="/iconnavigationarrow-back-ios-24px.svg"
+        />
+      </>
+
+      <div className="">
+        <b className="absolute top-[12.13rem] left-[52.75rem] text-[1.88rem] text-black">
+          Login to your Account
+        </b>
+        <div className="absolute top-[15.06rem] left-[52.75rem] text-[1.13rem] leading-[1.75rem] flex items-center w-[25.69rem]">
+          with your registered Email Address
+        </div>
+
+        <div className="absolute top-[22.81rem] left-[52.75rem] rounded-11xl bg-white shadow-[0px_15px_40px_5px_#ededed] w-[26.63rem] h-[4rem]" />
+        <div className="absolute top-[30.38rem] left-[52.75rem] rounded-11xl bg-white shadow-[0px_15px_40px_5px_#ededed] w-[26.63rem] h-[4rem]" />
+
+        {/* login */}
+        <Button
+          type="button"
+          onClick={() => router.push("/dashboard")}
+          className="absolute flex items-center justify-center top-[39.5rem] left-[52.75rem] rounded-11xl bg-lightslategray-100 w-[26.63rem] h-[4rem] text-xl text-white"
+        >
+          Login
+        </Button>
+
+        {/* login google */}
+        <div className="absolute top-[47.56rem] left-[52.75rem] rounded-11xl bg-white shadow-[0px_15px_40px_5px_#ededed] w-[26.63rem] h-[4rem]" />
+
+        <div className="absolute top-[24.13rem] left-[54.88rem] text-[0.88rem] font-medium">
+          Enter email address
+        </div>
+
+        <div className="absolute top-[31.69rem] left-[55.06rem] text-[0.88rem] font-medium">
+          Password
+        </div>
+
+        <div className="absolute top-[48.88rem] left-[60.94rem] text-[1.19rem] font-medium text-black text-center">
+          Login with Google
+        </div>
+
+        <div className="absolute top-[31.69rem] left-[75.06rem] text-[0.75rem] text-black text-right">
+          Show
+        </div>
+
+        <div className="absolute top-[45.06rem] left-[65.56rem] text-[0.75rem] text-silver text-center">
+          Or
+        </div>
+
+        <div className="absolute top-[20.56rem] left-[52.75rem] font-medium text-dimgray">
+          Email address*
+        </div>
+
+        <div className="absolute top-[28.13rem] left-[52.75rem] font-medium text-dimgray">
+          Enter password*
+        </div>
+
+        <div className="absolute top-[35.69rem] left-[54.88rem] font-medium text-dimgray">
+          Remember my password
+        </div>
+
+        <div className="absolute top-[18.72rem] left-[52.66rem] box-border w-[26.75rem] h-[0.06rem] border-t-[1px] border-solid border-whitesmoke-100" />
+        <div className="absolute top-[45.53rem] left-[68.59rem] box-border w-[10.81rem] h-[0.06rem] border-t-[1px] border-solid border-whitesmoke-100" />
+        <div className="absolute top-[45.53rem] left-[52.72rem] box-border w-[10.81rem] h-[0.06rem] border-t-[1px] border-solid border-whitesmoke-100" />
+
+        <img
+          className="absolute top-[35.88rem] left-[52.75rem] w-[1.25rem] h-[1.25rem] overflow-hidden"
+          alt=""
+          src="/square-checkbox-solid1.svg"
+        />
+        <img
+          className="absolute top-[48.88rem] left-[55.44rem] w-[1.5rem] h-[1.5rem] overflow-hidden"
+          alt=""
+          src="/flatcoloriconsgoogle.svg"
+        />
+        <img
+          className="absolute top-[0rem] left-[0rem] w-[41.25rem] h-[64rem] object-cover"
+          alt=""
+          src="/rectangle-29@2x.png"
         />
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <div className="absolute top-[0rem] left-[0rem] bg-lightslategray-200 [backdrop-filter:blur(1px)] w-[41.25rem] h-[64rem]" />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="absolute top-[16.81rem] left-[15.81rem] w-[20.22rem] h-[28.19rem] text-[1.13rem] text-white">
+        <div className="absolute top-[2.44rem] left-[0.88rem] leading-[2.38rem] flex items-center w-[18.56rem] pt-8">
+          Those people who develop the ability to continuously acquire new and
+          better forms of knowledge that they can apply to their work and to
+          their lives will be the movers and shakers in our society for the
+          indefinite future
+        </div>
+        <div className="absolute top-[22.31rem] left-[0.88rem] font-medium">
+          Brian Tracy
+        </div>
+        <img
+          className="absolute top-[26.13rem] left-[18.13rem] w-[2.09rem] h-[2.06rem]"
+          alt=""
+          src="/vector-1.svg"
+        />
+        <b className="absolute top-[0rem] left-[0rem] text-[6rem] font-gayathri text-darkturquoise">
+          “
+        </b>
       </div>
     </main>
-  )
+  );
 }
