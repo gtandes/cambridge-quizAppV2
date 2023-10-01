@@ -40,9 +40,9 @@ export const quiz = {
     {
       id: 5,
       question:
-        "Which Shakespearean play features the characters Romeo and Juliet?",
-      answers: ["Hamlet", "Macbeth", "Othello", "Romeo and Juliet"],
-      correctAnswer: "Romeo and Juliet",
+        "Which Shakespearean play features the characters Romeo & Juliet?",
+      answers: ["Hamlet", "Macbeth", "Othello", "Romeo & Juliet"],
+      correctAnswer: "Romeo & Juliet",
     },
   ],
 };

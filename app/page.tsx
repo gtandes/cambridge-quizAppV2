@@ -95,7 +95,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="absolute top-[0rem] left-[0rem] bg-lightslategray-200 [backdrop-filter:blur(1px)] w-[41.25rem] h-[64rem]" />
+      <div className="absolute top-[0rem] left-[0rem] bg-lightslategray-200 [backdrop-filter:blur(1px)] w-[41.25rem] h-[100dvh]" />
 
       <div className="absolute top-[16.81rem] left-[15.81rem] w-[20.22rem] h-[28.19rem] text-[1.13rem] text-white">
         <div className="absolute top-[2.44rem] left-[0.88rem] leading-[2.38rem] flex items-center w-[18.56rem] pt-8">

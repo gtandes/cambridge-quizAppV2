@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { quiz } from "../../api/data";
+import { Button, ButtonGroup } from "@nextui-org/react";
 
 type ResultState = {
   score: number;
@@ -32,10 +33,10 @@ const page: React.FC = () => {
     setSelectedAnswerIndex(idx);
     if (answer === correctAnswer) {
       setSelectedAnswer(true);
-      console.log("true");
+      // console.log("true");
     } else {
       setSelectedAnswer(false);
-      console.log("false");
+      // console.log("false");
     }
   };
 
@@ -64,7 +65,7 @@ const page: React.FC = () => {
   };
 
   return (
-    <div className="container">
+    <main className="flex flex-col items-center justify-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-sky-400 to-sky-200 w-[100vw] h-full">
       <div>
         <h2>
           Question: {activeQuestion + 1}
@@ -76,25 +77,34 @@ const page: React.FC = () => {
         {!showResult ? (
           <div className="quiz-container">
             <h3>{questions[activeQuestion].question}</h3>
+            {/* <ButtonGroup className="flex flex-col"> */}
             {answers.map((answer: string, idx: number) => (
-              <li
+              <Button
+                size="lg"
                 key={idx}
                 onClick={() => onAnswerSelected(answer, idx)}
-                className={
+                className={`self-stretch min-w-[2rem] ${
                   selectedAnswerIndex === idx ? "li-selected" : "li-hover"
-                }
+                }`}
               >
-                <span>{answer}</span>
-              </li>
+                {answer}
+              </Button>
             ))}
+            {/* </ButtonGroup> */}
+
             {checked ? (
-              <button onClick={nextQuestion} className="btn">
+              <Button color="primary" onClick={nextQuestion} className="btn">
                 {activeQuestion === questions.length - 1 ? "Finish" : "Next"}
-              </button>
+              </Button>
             ) : (
-              <button onClick={nextQuestion} disabled className="btn-disabled">
+              <Button
+                color="primary"
+                onClick={nextQuestion}
+                disabled
+                className="btn-disabled"
+              >
                 {activeQuestion === questions.length - 1 ? "Finish" : "Next"}
-              </button>
+              </Button>
             )}
           </div>
         ) : (
@@ -113,11 +123,13 @@ const page: React.FC = () => {
             <p>
               Wrong Answers: <span>{result.wrongAnswers}</span>
             </p>
-            <button onClick={() => window.location.reload()}>Restart</button>
+            <Button color="primary" onClick={() => window.location.reload()}>
+              Restart
+            </Button>
           </div>
         )}
       </div>
-    </div>
+    </main>
   );
 };
 

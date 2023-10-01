@@ -13,11 +13,8 @@ const Instruction: NextPage = () => {
     <div className="relative bg-white [backdrop-filter:blur(50px)] w-full h-[100dvh] overflow-hidden text-left text-[1.25rem] text-dimgray">
       <div className="absolute top-[8.31rem] left-[20.56rem] rounded-11xl bg-white shadow-[0px_15px_40px_5px_#ededed] w-[67.5rem] h-[53.81rem]" />
       <b className="absolute top-[9.69rem] left-[23rem] text-[2.06rem]">
-        History Quiz
+        English Quiz
       </b>
-      <div className="absolute top-[13.25rem] left-[23rem]">
-        Read the following instructions
-      </div>
       <div className="absolute top-[16.31rem] left-[57.13rem] text-[1.44rem] font-semibold">{`Date: `}</div>
       <div className="absolute top-[16.56rem] left-[67.5rem]">
         {formattedDate}
